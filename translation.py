@@ -76,7 +76,7 @@ __○ ᴄʀᴇᴀᴛᴏʀ :  @AvishkarPatil__
 """
 
 
-SOURCE_TECT = """
+SOURCE_TEXT = """
 
 ○ <b> I Am Available Open Source on Github 
       Click Below Link And Deploy Me Now </b>
