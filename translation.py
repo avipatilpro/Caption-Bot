@@ -84,3 +84,4 @@ SOURCE_TECT = """
 ○ <i>DEPLOY</i> : <b><a href="https://heroku.com/deploy?template=https://github.com/avipatilpro/Caption-Bot">On Heroku</a></b>    
 
 ○ <i>SOURCE</i> : <b><a href="https://github.com/avipatilpro/Caption-Bot">Caption Bot</a></b>  
+"""
