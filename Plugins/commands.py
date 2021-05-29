@@ -21,11 +21,10 @@ start_button=InlineKeyboardMarkup(
                   InlineKeyboardButton("🖋 Current Caption", callback_data = "status_data")
               ], 
               [
-                  InlineKeyboardButton("🍃 Follow Me", url = "https://Instagram.com/proavipatil"), 
-                  InlineKeyboardButton("📕 About", callback_data = "about_data")
+                  InlineKeyboardButton("🤩 Help", callback_data = "help_data"), 
+                  InlineKeyboardButton("🛡 About", callback_data = "about_data")
               ], 
               [
-                  InlineKeyboardButton("💡 Help", callback_data = "help_data"), 
                   InlineKeyboardButton("🔐 Close", callback_data = "close_data")
               ] 
         ]
@@ -52,6 +51,9 @@ about_button=InlineKeyboardMarkup(
               [
                   InlineKeyboardButton("⬇️ BACK", callback_data = "back_data"), 
                   InlineKeyboardButton("🔐 CLOSE", callback_data = "close_data")
+              ], 
+              [
+                  InlineKeyboardButton("🤩 Help", callback_data = "help_data")
               ]
         ]
 ) 
