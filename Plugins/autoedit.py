@@ -27,7 +27,9 @@ async def editing(bot, message):
           if message.caption:                        
              file_caption = f"**{message.caption}**"                
           else:
-             file_caption = f"`{media.file_name}`"  
+             fname = media.file_name
+             filename = fname.replace("_", " ")
+             file_caption = f"`{filename}`"  
               
       try:
           if caption_position == "top":
