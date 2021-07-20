@@ -28,7 +28,7 @@ async def editing(bot, message):
              file_caption = f"**{message.caption}**"                
           else:
              fname = media.file_name
-             filename = fname.replace("_", " ")
+             filename = fname.replace("_", ".")
              file_caption = f"`{filename}`"  
               
       try:
