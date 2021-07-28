@@ -33,7 +33,6 @@
 /about - A command to know about the bot
 /source - A Command to Looks about Source Code
 ```
-### Thanks :
 
-- [Avishkar Patil](https://github.com/avipatilpro)
-- [Ts_Bots](https://github.com/Ts-Bots)
+
+- [© Avishkar Patil](https://github.com/avipatilpro)
