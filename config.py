@@ -1,5 +1,11 @@
-import os
+import os, logging
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="[%(asctime)s - %(levelname)s] - %(message)s",
+    datefmt='%d-%b-%y %H:%M:%S'
+)
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 class Config(object):
@@ -9,3 +15,6 @@ class Config(object):
       CAPTION_TEXT = os.environ.get("CAPTION_TEXT", "")
       CAPTION_POSITION = os.environ.get("CAPTION_POSITION", "nil")
       ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME", "AvishkarPatil")
+
+def LOGGER(name: str) -> logging.Logger:
+    return logging.getLogger(name)

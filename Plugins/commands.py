@@ -4,7 +4,7 @@ logging.basicConfig(level=logging.DEBUG,
 logger = logging.getLogger(__name__)
 
 import pyrogram
-from pyrogram import filters
+from pyrogram import filters, enums
 from bot import autocaption
 from config import Config
 from translation import Translation
@@ -77,7 +77,7 @@ async def start(bot, cmd):
           chat_id = cmd.chat.id,
           text = Translation.START_TEXT.format(cmd.from_user.first_name, Config.ADMIN_USERNAME), 
           reply_to_message_id = cmd.message_id,
-          parse_mode = "markdown",
+          enums.ParseMode.HTML,
           disable_web_page_preview = True, 
           reply_markup = start_button
       )
@@ -89,7 +89,7 @@ async def help(bot, cmd):
           chat_id = cmd.chat.id,
           text = Translation.HELP_TEXT, 
           reply_to_message_id = cmd.message_id,
-          parse_mode = "html",
+          enums.ParseMode.HTML,
           disable_web_page_preview = True,
           reply_markup = help_button           
       )
@@ -101,7 +101,7 @@ async def about(bot, cmd):
           chat_id = cmd.chat.id,
           text = Translation.ABOUT_TEXT, 
           reply_to_message_id = cmd.message_id,
-          parse_mode = "markdown",
+          enums.ParseMode.MARKDOWN,
           disable_web_page_preview = True, 
           reply_markup = about_button
       )
@@ -113,7 +113,7 @@ async def about(bot, cmd):
           chat_id = cmd.chat.id,
           text = Translation.SOURCE_TEXT, 
           reply_to_message_id = cmd.message_id,
-          parse_mode = "html",
+          parse_mode = enums.ParseMode.HTML,
           disable_web_page_preview = True, 
           reply_markup = source_button
       )      
@@ -128,7 +128,7 @@ async def button(bot, cmd: CallbackQuery):
     if "about_data" in cb_data:
         await cmd.message.edit(
              text = Translation.ABOUT_TEXT,
-             parse_mode="markdown", 
+             enums.ParseMode.MARKDOWN, 
              disable_web_page_preview=True, 
              reply_markup=InlineKeyboardMarkup(
                  [
@@ -143,7 +143,7 @@ async def button(bot, cmd: CallbackQuery):
     elif "help_data" in cb_data:
           await cmd.message.edit(
                text=Translation.HELP_TEXT,
-               parse_mode="html", 
+               enums.ParseMode.HTML, 
                disable_web_page_preview=True, 
                reply_markup=InlineKeyboardMarkup(
                    [
@@ -161,7 +161,7 @@ async def button(bot, cmd: CallbackQuery):
     elif "back_data" in cb_data:
           await cmd.message.edit(
                text=Translation.START_TEXT.format(cmd.from_user.first_name, Config.ADMIN_USERNAME),
-               parse_mode="markdown", 
+               enums.ParseMode.MARKDOWN, 
                disable_web_page_preview=True, 
                reply_markup=InlineKeyboardMarkup(
                    [
@@ -187,7 +187,7 @@ async def button(bot, cmd: CallbackQuery):
     elif "markdown_data" in cb_data:
           await cmd.message.edit(
                text=Translation.MARKDOWN_TEXT,
-               parse_mode="html", 
+               enums.ParseMode.HTML, 
                disable_web_page_preview=True, 
                reply_markup=InlineKeyboardMarkup(
                    [
@@ -202,7 +202,7 @@ async def button(bot, cmd: CallbackQuery):
     elif "status_data" in cb_data:
           await cmd.message.edit(
                text=Translation.STATUS_DATA.format(Config.CAPTION_TEXT, Config.CAPTION_POSITION),
-               parse_mode="html", 
+               enums.ParseMode.HTML, 
                disable_web_page_preview=True, 
                reply_markup=InlineKeyboardMarkup(
                    [
