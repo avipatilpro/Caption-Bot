@@ -6,7 +6,7 @@ class autocaption(Client):
         super().__init__(
             "autocaption",
             api_hash=Config.API_HASH,
-            api_id=Config.APP_ID,
+            api_id=Config.API_ID,
             bot_token=Config.BOT_TOKEN, 
             workers=20,
             plugins={
