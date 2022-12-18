@@ -29,9 +29,5 @@ class autocaption(Client):
         self.LOGGER(__name__).info("Bot stopped. Bye.")
 
 
-
-def LOGGER(name: str) -> logging.Logger:
-    return logging.getLogger(name)
-
 app = autocaption()
 app.run()
