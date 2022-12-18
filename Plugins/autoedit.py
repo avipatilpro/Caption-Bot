@@ -4,7 +4,7 @@ logging.basicConfig(level=logging.DEBUG,
 logger = logging.getLogger(__name__)
 
 import asyncio
-from pyrogram import filters
+from pyrogram import filters, enums
 from bot import autocaption
 from config import Config
 
@@ -14,8 +14,9 @@ usercaption_position = Config.CAPTION_POSITION
 caption_position = usercaption_position.lower()
 caption_text = Config.CAPTION_TEXT
 
+media = filters.document | filters.video | filters.audio
 
-@autocaption.on_message(filters.channel & (filters.document | filters.video | filters.audio ) & ~filters.edited, group=-1)
+@autocaption.on_message(filters.channel & media)
 async def editing(bot, message):
       try:
          media = message.document or message.video or message.audio
@@ -35,23 +36,23 @@ async def editing(bot, message):
           if caption_position == "top":
              await bot.edit_message_caption(
                  chat_id = message.chat.id, 
-                 message_id = message.message_id,
+                 message_id = message.id,
                  caption = caption_text + "\n" + file_caption,
-                 parse_mode = "markdown"
+                 parse_mode = enums.ParseMode.MARKDOWN
              )
           elif caption_position == "bottom":
              await bot.edit_message_caption(
                  chat_id = message.chat.id, 
-                 message_id = message.message_id,
+                 message_id = message.id,
                  caption = file_caption + "\n" + caption_text,
-                 parse_mode = "markdown"
+                 parse_mode = enums.ParseMode.MARKDOWN
              )
           elif caption_position == "nil":
              await bot.edit_message_caption(
                  chat_id = message.chat.id,
-                 message_id = message.message_id,
+                 message_id = message.id,
                  caption = caption_text, 
-                 parse_mode = "markdown"
+                 parse_mode = enums.ParseMode.MARKDOWN
              ) 
       except:
           pass
