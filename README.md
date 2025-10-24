@@ -1,38 +1,77 @@
 <h1 align='center'>🖊️ TG AutoCaption Bot </h1>
 
+<h4 align='center'>Telegram Auto Caption Bot With Custom Text & Better Structure<br><br><i>(Works in channels - public or private)</i> </h4><br>
 
-<h4 align='center'>Bot Used For Auto Caption For Telegram Files & Video With Custom Text<br><br><i>(Only in channels either public or private Telegram channel)</i> </h4><br>
+[//]: # (<h4 align='center'>✯ Demo Bot ✯<br></h4>)
 
+[//]: # (<h3 align='center' ><b><a href="https://telegram.me/CapXBot">¢αρтισи вσт</a></b></h3>)
 
-<h4 align='center'>✯ Demo Bot ✯<br></h4>
-<h3 align='center' ><b><a href="https://telegram.me/CapXBot">¢αρтισи вσт</a></b></h3>
+### ✨ Features
 
+- Auto caption for all media files in channels
+- Customizable caption text with markdown support
+- Flexible caption positioning (Top/Bottom/Replace)
+- Clean and organized code structure
+- Updated to latest Pyrofork
+- Environment variable support
+- Easy deployment options
 
-###  Config Vars :
+### 📋 Config Variables
 
-- ```CAPTION_TEXT``` - Caption Below File [ Markdown ]
+- `BOT_TOKEN` - Your Bot Token from [@BotFather](https://t.me/BotFather)
+- `API_ID` - Your API ID from [my.telegram.org](https://my.telegram.org)
+- `API_HASH` - Your API Hash from [my.telegram.org](https://my.telegram.org)
+- `CAPTION_TEXT` - Your Custom Caption Text [Supports Markdown]
+- `CAPTION_POSITION` - Caption Position: `top`, `bottom`, or `nil` (replace)
+- `ADMIN_USERNAME` - Your Username (without @)
 
-- ```CAPTION_POSITION``` - Position of Your Caption According to File Name [ Top, Bottom, or Nil ]
-<br>
+### 🚀 Deploy
 
-### Deploy :
-
-- Fork This Repo
-- Without Any Changes Click Below Button 
-- Deploy This Repo
-
+#### Heroku Deploy
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-<br>
 
+#### Manual Deploy
 
-### Commands :
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/avipatilpro/Caption-Bot
+   cd Caption-Bot
+   ```
+
+2. **Install Requirements**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Set Environment Variables**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your values
+   ```
+
+4. **Run Bot**
+   ```bash
+   python main.py
+   ```
+
+### 🤖 Commands
 
 ```
-/start - A command to start the bot
-/help  - A command to help you how to use the bot
-/about - A command to know about the bot
-/source - A Command to Looks about Source Code
+/start - Start the bot
+/help  - Get help information
+/about - About the bot
 ```
 
 
-- [© Avishkar Patil](https://github.com/avipatilpro)
+
+### 🔧 Setup Instructions
+
+1. Create a bot via [@BotFather](https://t.me/BotFather)
+2. Get API credentials from [my.telegram.org](https://my.telegram.org)
+3. Add bot as admin in your channel with edit permissions
+4. Deploy using any method above
+5. Set your custom caption and position
+
+---
+
+**[© Avishkar Patil](https://github.com/avipatilpro)**

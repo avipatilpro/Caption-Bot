@@ -1,6 +1,6 @@
 {
-  "name": "Caption Bot [ Avishkar Patil ]",
-  "description": "Telegram auto caption bot. Create your Fork now.",
+  "name": "TG AutoCaption Bot",
+  "description": "Telegram auto caption bot with enhanced features. Create your Fork now.",
   "keywords": [
     "telegram",
     "best",
@@ -16,11 +16,11 @@
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
       "value": "ANYTHING"
     },
-    "TG_BOT_TOKEN": {
+    "BOT_TOKEN": {
       "description": "Your bot token, as a string.",
       "value": ""
     },
-    "APP_ID": {
+    "API_ID": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
