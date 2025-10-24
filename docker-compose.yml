@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  caption-bot:
+    build: .
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - CAPTION_TEXT=${CAPTION_TEXT}
+      - CAPTION_POSITION=${CAPTION_POSITION:-bottom}
+      - ADMIN_USERNAME=${ADMIN_USERNAME}
+    restart: unless-stopped

@@ -16,7 +16,7 @@ async def auto_caption(client, message):
         media = message.document or message.video or message.audio or message.photo
         
         if message.caption:
-            file_caption = f"**{message.caption}**"
+            file_caption = message.caption
         else:
             fname = getattr(media, 'file_name', 'Media')
             filename = fname.replace("_", ".")

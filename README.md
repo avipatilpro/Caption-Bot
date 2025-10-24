@@ -54,6 +54,21 @@
    python main.py
    ```
 
+#### Docker Deploy
+
+```bash
+# Clone repository
+git clone https://github.com/avipatilpro/Caption-Bot
+cd Caption-Bot
+
+# Set environment variables in .env file
+cp .env.example .env
+# Edit .env with your values
+
+# Run with Docker Compose
+docker-compose up -d
+```
+
 ### 🤖 Commands
 
 ```
